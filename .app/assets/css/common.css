@@ -1,0 +1,55 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+html {
+  font-family: NanumSquare;
+}
+.font-sans {
+  font-family: NanumSquare;
+}
+.splitpanes__splitter {
+  position: relative;
+  width: 12px;
+}
+.splitpanes__splitter:before,
+.splitpanes__splitter:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #00000026;
+  transition: background-color 0.3s;
+}
+.splitpanes__splitter:before {
+  transform: translateY(-50%);
+  width: 1px;
+  height: 30px;
+  margin-left: -2px;
+}
+.splitpanes__splitter:after {
+  transform: translateY(-50%);
+  width: 1px;
+  height: 30px;
+  margin-left: 1px;
+}
+
+.ailist.active .ailist__button {
+  display: none;
+}
+.ailist.active .ailist__list {
+  filter: none !important;
+}
+
+.ai-wrap {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 52px);
+}
+
+.ailist {
+  height: 100%;
+  overflow: hidden;
+}
+.ailist__list {
+  height: 100%;
+  overflow: auto;
+}
